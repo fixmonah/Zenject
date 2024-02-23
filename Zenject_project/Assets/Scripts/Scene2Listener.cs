@@ -1,5 +1,4 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using Zenject;
 
@@ -12,7 +11,7 @@ public class Scene2Listener : MonoBehaviour
         StartCoroutine(StartAfterFirstFrame());
     }
 
-    IEnumerator StartAfterFirstFrame() 
+    IEnumerator StartAfterFirstFrame()
     {
         yield return new WaitForEndOfFrame();
         Debug.Log($"GlobalValue.Value1: {_globalValue.Value1}");
